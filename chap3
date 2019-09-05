@@ -1,0 +1,19 @@
+print("ex1")
+for f in range (0,1000):
+    print("We like Python's turtles!")
+
+print("ex3")
+for f in ["January","Febuary","March","April","May","June","July","Aug","Sept","Oct","Nov","Dec"]:
+    month = "One of the months of the year is " + f
+    print(month)
+
+print("ex4")
+import turtle
+wn = turtle.Screen()
+tess = turtle.Turtle()
+tess.left(3645)
+turtle.done()
+print(3645 // 360)
+print(3645 % 360)
+print("turns around until 10 times and then faces north east")
+print(ex5)
