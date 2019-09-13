@@ -1,6 +1,18 @@
 print("ex1")
 for f in range (0,1000):
     print("We like Python's turtles!")
+    
+print("ex2")
+import turtle
+cellphone = turtle.Turtle()
+# 3 Attributes
+cellphone.turtle.colour("lightgreen")
+cellphone.speed(100)
+cellphone.turtle.size(100)
+# 3 Methods
+cellphone.forward(100)
+cellphone.backward(100)
+cellphone.stamp()
 
 print("ex3")
 for f in ["January","Febuary","March","April","May","June","July","Aug","Sept","Oct","Nov","Dec"]:
