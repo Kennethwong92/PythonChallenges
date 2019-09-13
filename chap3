@@ -45,3 +45,48 @@ for loop in range (0, 8):
     turtle.left(45)
 turtle.done()
 
+print("ex7")
+import turtle
+
+wn = turtle.Screen()
+for angle in [160, -43, 270, -97, -43, 200, -940, 17, -86]:
+
+    turtle.left(angle)
+    turtle.forward(100)
+print('the pirate has a heading of', turtle.heading())
+turtle.done()
+
+print("ex9")
+import turtle
+for loop in range (0,18):
+    turtle.forward(50)
+    turtle.left(180-((18-2)*180)/18)
+
+print("ex10")
+import turtle
+for loop in range(0,5):
+    turtle.forward(50)
+    turtle.left(215)
+
+print("ex11")
+import turtle
+wn = turtle.Screen()
+wn.bgcolor("lightgreen")
+turtle.shape("turtle")
+turtle.color("blue")
+turtle.pensize(5)
+turtle.stamp()
+for loop in range (0, 12):
+    turtle.penup()
+    turtle.forward(80)
+    turtle.pendown()
+    turtle.forward(10)
+    turtle.penup()
+    turtle.forward(20)
+    turtle.pendown()
+    turtle.stamp()
+    turtle.penup()
+    turtle.backward(110)
+    turtle.pendown()
+    turtle.right(30)
+turtle.done()
