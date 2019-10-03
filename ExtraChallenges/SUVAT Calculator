@@ -1,1 +1,31 @@
-
+print("1 : v = u + at")
+print("2 : v**2 = u^2 + 2as")
+print("3 : s = ut + 0.5at^2)")
+print("4 : s = vt - 0.5at^2)")
+print("5 : (v+u)t/2")
+equation = int(input("which equation do you want to use? choose 1 - 5"))
+if equation == 1:
+    u = int(input('what is your u value?'))
+    a = int(input('what is your a value?'))
+    t = int(input('what is your t value?'))
+    print(u + a*t)
+if equation == 2:
+    u = int(input('what is your u value?'))
+    a = int(input('what is your a value?'))
+    s = int(input('what is your s value?'))
+    print((u**2 + 2*a*s)**0.5)
+if equation == 3:
+    u = int(input('what is your u value?'))
+    a = int(input('what is your a value?'))
+    t = int(input('what is your t value?'))
+    print(u*t + 0.5*a*t**2)
+if equation == 4:
+    v = int(input('what is your v value?'))
+    a = int(input('what is your a value?'))
+    t = int(input('what is your t value?'))
+    print(v*t - 0.5*a*t**2)
+if equation == 5:
+    v = int(input('what is your v value?'))
+    u = int(input('what is your u value?'))
+    t = int(input('what is your t value?'))
+    print((v+u)*t/2)
