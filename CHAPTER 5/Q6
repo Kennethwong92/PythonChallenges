@@ -1,0 +1,20 @@
+def grade(g):
+    if g >= 75:
+        print("A")
+    elif 70 <= g < 75:
+        print("B")
+    elif 60 <= g < 70:
+        print("C")
+    elif 50 <= g < 60:
+        print("D")
+    elif 45 <= g < 50:
+        print("E")
+    elif 40 <= g < 45:
+        print("F")
+    elif g < 40:
+        print("U")
+
+xs = [83, 75, 74.9, 70, 69.9, 65, 60, 59.9, 55, 50, 49.9, 45, 44.9, 40, 39.9, 2, 0]
+
+for i in xs:
+    grade(i)
