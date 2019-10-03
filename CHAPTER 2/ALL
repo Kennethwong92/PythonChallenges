@@ -1,0 +1,51 @@
+print("ex1")
+f = "All"
+w = "work"
+a = "and"
+n = "no"
+P = "play"
+m = "makes"
+J = "Jack"
+s = "a"
+d = "dull"
+b = "boy"
+print(f, w, a, n, P, m, J, s, d, b)
+
+print("ex2")
+print(6 * (1 - 2))
+
+print("ex4")
+bruce = 6
+print(bruce + 4)
+
+print("ex5")
+P = 10000
+r = 0.08
+n = 12
+t = int(input("how many years?"))
+A = P * (1 + (r / n)) ** (n * t)
+print(A)
+
+print("ex6")
+A = int(input("first number?"))
+B = int(input("second number?"))
+C = A % B
+print(C)
+
+print("ex7")
+Q = 51 // 24
+W = 51 - Q * 24
+E = 14 + W
+print(E)
+
+print("ex8")
+my_time = int(input('What time is it in 24hr clock?'))
+wait_time = int(input('How long do you want to wait?'))
+S = wait_time // 24
+D = wait_time - S * 24
+F = my_time + D
+if F > 24:
+    L = F - 24
+    print(L)
+if F < 24:
+    print(F)
