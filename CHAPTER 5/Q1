@@ -1,0 +1,10 @@
+days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thrusday", "Friday","Saturday"]
+
+def day(n):
+    print(days[n])
+
+n = int(input("What day?"))
+
+day(n)
+
+
