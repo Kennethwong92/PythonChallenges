@@ -1,0 +1,24 @@
+Name = input("Give the monster a name:")
+Origin = input("What is the origin of your monster?")
+Description = input("Describe the monster: ")
+print("Attack Force")
+Attack = int(input("Please enter a value for the monsters:"))
+if Attack >1 or Attack <30:
+    print("Magical Force")
+    Magical_Force = int(input("Please enter a value for the monsters:"))
+    if Attack >1 or Attack <30:
+    print("Magical Defence")
+    Magical_Defence = int(input("Please enter a value for the monsters:"))
+    if Attack >1 or Attack <30:
+    print("Defence")
+    Defence = int(input("Please enter a value for the monsters:"))
+    if Attack >1 or Attack <30:
+    print("Intelligence")
+    Intelligence = int(input("Please enter a value for the monsters:"))
+    if Attack >1 or Attack <30:
+    print("Health")
+    Health = int(input("Please enter a value for the monsters:"))
+    if Attack >1 or Attack <30:
+    print("Ok the monster card will now be printed")
+else:
+    print("Sorry the inputs have to be between 1 and 30")
