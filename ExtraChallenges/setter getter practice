@@ -1,0 +1,75 @@
+import random
+
+class Character:
+    def __init__(self):
+        self.name =  ""
+        self.attack = 0
+        self.defence = 0
+        self.__health = 0
+        self.experience = 0
+
+    def print_basics(self):
+        print("Name:       ",self.name)
+        print("attack:     ",self.attack)
+        print("defence     ",self.defence)
+        print("health:     ",self.__health)
+        print("experience: ",self.experience)
+
+    def print_me(self):
+        self.print_basics()
+
+    def print_intro(self):
+        print('This is an exciting story')
+
+
+class wizard(Character):
+    def __init__(self):
+        Character.__init__(self) #need to add in parent classes
+        self.magic = 0 #Make this private
+
+    def setter(self,name):
+        self.name =  name
+        self.attack = random.randint(0,50)
+        self.defence = random.randint(0,50)
+        self.health = random.randint(0,50)
+        self.__magic = 250
+
+    def magic_getter(self):
+        return self.__magic
+
+    def print_me(self):
+        self.print_basics()
+        print("magic       ",self.magic)
+
+class knight(Character):
+    def __init__(self):
+        Character.__init__(self) #need to add in parent classes
+        self.armour = 0
+
+    def setter(self,name):
+        self.name =  name
+        self.attack = random.randint(0,50)
+        self.defence = 0
+        self.health = 50
+        self.__armour = 300
+
+    def armour_getter(self):
+        return self.__armour
+
+    def print_me(self):
+        self.print_basics()
+        print("armour      ",self.armour)
+
+arthur = knight()
+arthur.setter("Arthur")
+
+merlin = wizard()
+merlin.setter("Merlin")
+
+print("Merlin attacks Arthur with magic")
+knight_defence = arthur.armour
+attack = merlin.magic_getter() - arthur.defence
+arthur_health = arthur.health + arthur.armour_getter() - attack
+print("Merlin magic does",attack)
+print("Arthur health is now",arthur_health)
+
