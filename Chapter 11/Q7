@@ -1,0 +1,8 @@
+
+def dot_product(u,v):
+    a = 0
+    for i in u:
+        a += u[i-1] * v[i-1]
+    return a
+
+print(dot_product([1,2],[1,3]))
