@@ -1,0 +1,7 @@
+
+def myreplace(old, new, s):
+    return new.join(s.split(old))
+
+
+print(myreplace(",", ";", "this, that, and some other thing"))
+print(myreplace(" ", "**","Words will now be separated by stars."))
