@@ -1,21 +1,19 @@
 from urllib.request import urlopen
 from bs4 import BeautifulSoup as soup
-myurl = "https://www.lazada.com.my/catalog/?q=rtx+2080+ti&_keyori=ss&from=input&spm=a2o4k.home.search.go.75f82e7eK8OJ1t"
+myurl = "https://dailyclack.com/collections/group-buys"
 urlclient = urlopen(myurl) #open webpage and takes the html
 page_html = urlclient.read()
 urlclient.close()
 page_soup = soup(page_html, "html.parser") #parsers the html
-cards = page_soup.findAll("div",{"class":"c5TXIP"}) #grabs every product on that page
-print(len(cards))
-#out_filename = "Dailyclack.csv" #csv file name
-#headers = "Product Name,Starting Price\n"
-#f = open(out_filename, "w", encoding='utf-8')
-#f.write(headers)
-#for card in cards:
-    #card_name = card.findAll("div",{"class":"c16H9d"})
-    #product_name = card_name[0].text
-    #card_price = card.findAll("span",{"class":"c13VH6"})
-    #starting_price = card_price[0].text
-    #f.write(product_name + ", " + starting_price + "\n")
-#f.close()
+items = page_soup.findAll("div",{"class":"product-card__name"}) #grabs every product on that page
+print(len(items))
+out_filename = "Dailyclack.csv" #csv file name
+headers = "product name\n"
+f = open(out_filename, "w")
+f.write(headers)
+for item in items:
+    product_name = item.text
+    f.write(product_name.replace(",","|") + "," + "\n")
+f.close()
+
 
