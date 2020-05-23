@@ -1,6 +1,7 @@
 from tweepy.streaming import StreamListener #Class from tweepy module that will listen for tweets
 from tweepy import OAuthHandler #Class to handle the authentication my account
 from tweepy import Stream
+import tweepy
 
 import twitterkeys #importing file with access and api keys
 class OutputListener(StreamListener): #class OutputListener inherits all of the features of the class StreamListener
@@ -11,12 +12,24 @@ class OutputListener(StreamListener): #class OutputListener inherits all of the 
 
     def on_error(self, status): #method overiding, this function overrides the pre existing on_error function in StreamListener
         print(status) #prints out any errors that occurs
+
+status = input("What do you want to update your status to?")
+tweet = input("What would you like to post?")
+track = input("What keyword do you want to filter for?")
+
 if __name__ == "__main__":
 
     listener = OutputListener()
     auth = OAuthHandler(twitterkeys.API_key, twitterkeys.API_secret_key)
     auth.set_access_token(twitterkeys.Access_token, twitterkeys.Access_token_secret)
+    api = tweepy.API(auth, wait_on_rate_limit=True,
+    wait_on_rate_limit_notify=True)
 
-    stream = Stream(auth, listener)
+    api.update_profile(description=status) #this is the profile bio
 
-    stream.filter(track=['wong wei khin'])
+    api.update_status(tweet) #tweets are called status
+
+    stream = Stream(auth, listener) 
+
+    stream.filter(track=[track]) #the word the will be tracked
+
